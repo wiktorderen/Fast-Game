@@ -10,6 +10,12 @@
 [Ll]ogs/
 [Mm]emoryCaptures/
 Fast/Assets/RoadArchitect
+Fast/Assets/CactusPack
+Fast/Assets/Car Engine Sounds
+Fast/Assets/Cars
+Fast/Assets/SampleScenes
+Fast/Assets/Standard Assets
+Fast/Assets/RealisticEngineSound
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
