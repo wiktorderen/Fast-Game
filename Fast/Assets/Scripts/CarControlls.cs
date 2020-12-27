@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarControlls : MonoBehaviour
 {
+
     public const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
 
@@ -30,7 +31,7 @@ public class CarControlls : MonoBehaviour
     private void FixedUpdate()
     {
         GetInput();
-        HandleMotor();
+        Accelerate();
         HandleSteering();
         UpdateWheels();
     }
@@ -42,24 +43,27 @@ public class CarControlls : MonoBehaviour
         isBreaking = Input.GetKey(KeyCode.Space);
     }
 
-    private void HandleMotor()
+    private void Accelerate()
     {
         rearLeftWheelCollider.motorTorque = verticalInput * motorForce;
         rearRightWheelCollider.motorTorque = verticalInput * motorForce;
+        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
         currentBreakForce = isBreaking ? breakForce : 0f;
         if (isBreaking)
         {
-            ApplyBreaking();
+            Break();
         }
     }
 
-    private void ApplyBreaking()
+    private void Break()
     {
         frontRightWheelCollider.brakeTorque = currentBreakForce;
         frontLeftWheelCollider.brakeTorque = currentBreakForce;
         rearRightWheelCollider.brakeTorque = currentBreakForce;
         rearLeftWheelCollider.brakeTorque = currentBreakForce;
     }
+    GameObject Player;
 
     private void HandleSteering()
     {
