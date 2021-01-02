@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CarControlls : MonoBehaviour
 {
-
     public const string Horizontal = "Horizontal";
     private const string Vertical = "Vertical";
 
@@ -13,20 +12,23 @@ public class CarControlls : MonoBehaviour
     private float currentSteerAngle;
     private float currentBreakForce;
     private bool isBreaking;
+    public float Revs;
 
-    [SerializeField] private float motorForce;
-    [SerializeField] private float breakForce;
-    [SerializeField] private float maxSteerAngle;
 
-    [SerializeField] private WheelCollider frontLeftWheelCollider;
-    [SerializeField] private WheelCollider frontRightWheelCollider;
-    [SerializeField] private WheelCollider rearLeftWheelCollider;
-    [SerializeField] private WheelCollider rearRightWheelCollider;
+    [SerializeField] private float motorForce = 0f;
+    [SerializeField] private float breakForce = 0f;
+    [SerializeField] private float maxSteerAngle = 0f;
 
-    [SerializeField] private Transform frontLeftWheelTransform;
-    [SerializeField] private Transform frontRightWheeTransform;
-    [SerializeField] private Transform rearLeftWheelTransform;
-    [SerializeField] private Transform rearRightWheelTransform;
+    [SerializeField] private WheelCollider frontLeftWheelCollider = null;
+    [SerializeField] private WheelCollider frontRightWheelCollider = null;
+    [SerializeField] private WheelCollider rearLeftWheelCollider = null;
+    [SerializeField] private WheelCollider rearRightWheelCollider = null;
+
+    [SerializeField] private Transform frontLeftWheelTransform =null;
+    [SerializeField] private Transform frontRightWheeTransform = null;
+    [SerializeField] private Transform rearLeftWheelTransform = null;
+    [SerializeField] private Transform rearRightWheelTransform = null;
+
 
     private void FixedUpdate()
     {
@@ -34,6 +36,7 @@ public class CarControlls : MonoBehaviour
         Accelerate();
         HandleSteering();
         UpdateWheels();
+        Revs = (frontLeftWheelCollider.rpm + frontRightWheelCollider.rpm) / 2;
     }
 
     private void GetInput()
@@ -88,3 +91,4 @@ public class CarControlls : MonoBehaviour
         wheelTransform.position = pos;
     }
 }
+
