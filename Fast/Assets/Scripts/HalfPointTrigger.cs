@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HalfPointTrigger : MonoBehaviour
 {
-    public GameObject LapCompleteTrigger;
-    public GameObject HalfLapTrigger;
+    public GameObject LapCompleteTrig;
+    public GameObject HalfLapTrig;
 
     void OnTriggerEnter()
     {
-        LapCompleteTrigger.SetActive(true);
-        HalfLapTrigger.SetActive(false);
+        LapCompleteTrig.SetActive(true);
+        HalfLapTrig.SetActive(false);
     }
 }

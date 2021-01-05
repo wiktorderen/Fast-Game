@@ -20,14 +20,14 @@ public class LapTime : MonoBehaviour
         MiliDisplay = MiliSecCount.ToString("F0");
         MiliBox.GetComponent<Text>().text = "" + MiliDisplay;
 
-        if(MiliSecCount >= 9)
+        if(MiliSecCount >= 10)
         {
             MiliSecCount = 0;
             SecondCount += 1;
         }
 
 
-        if(SecondCount <=9)
+        if(SecondCount <= 9)
         {
             SecondBox.GetComponent<Text>().text = "0" + SecondCount + ",";
         }
