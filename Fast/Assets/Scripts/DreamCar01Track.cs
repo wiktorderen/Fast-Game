@@ -31,20 +31,6 @@ public class DreamCar01Track : MonoBehaviour
     public GameObject Mark24;
     public GameObject Mark25;
     public GameObject Mark26;
-    public GameObject Mark27;
-    public GameObject Mark28;
-    public GameObject Mark29;
-    public GameObject Mark30;
-    public GameObject Mark31;
-    public GameObject Mark32;
-    public GameObject Mark33;
-    public GameObject Mark34;
-    public GameObject Mark35;
-    public GameObject Mark36;
-    public GameObject Mark37;
-    public GameObject Mark38;
-    public GameObject Mark39;
-    public GameObject Mark40;
 
     public int MarkTracker;
 
@@ -154,62 +140,6 @@ public class DreamCar01Track : MonoBehaviour
         if (MarkTracker == 25)
         {
             TheMarker.transform.position = Mark26.transform.position;
-        }
-        if (MarkTracker == 26)
-        {
-            TheMarker.transform.position = Mark27.transform.position;
-        }
-        if (MarkTracker == 27)
-        {
-            TheMarker.transform.position = Mark28.transform.position;
-        }
-        if (MarkTracker == 28)
-        {
-            TheMarker.transform.position = Mark29.transform.position;
-        }
-        if (MarkTracker == 29)
-        {
-            TheMarker.transform.position = Mark30.transform.position;
-        }
-        if (MarkTracker == 30)
-        {
-            TheMarker.transform.position = Mark31.transform.position;
-        }
-        if (MarkTracker == 31)
-        {
-            TheMarker.transform.position = Mark32.transform.position;
-        }
-        if (MarkTracker == 32)
-        {
-            TheMarker.transform.position = Mark33.transform.position;
-        }
-        if (MarkTracker == 33)
-        {
-            TheMarker.transform.position = Mark34.transform.position;
-        }
-        if (MarkTracker == 34)
-        {
-            TheMarker.transform.position = Mark35.transform.position;
-        }
-        if (MarkTracker == 35)
-        {
-            TheMarker.transform.position = Mark36.transform.position;
-        }
-        if (MarkTracker == 36)
-        {
-            TheMarker.transform.position = Mark37.transform.position;
-        }
-        if (MarkTracker == 37)
-        {
-            TheMarker.transform.position = Mark38.transform.position;
-        }
-        if (MarkTracker == 38)
-        {
-            TheMarker.transform.position = Mark39.transform.position;
-        }
-        if (MarkTracker == 39)
-        {
-            TheMarker.transform.position = Mark40.transform.position;
         }
     }
 
