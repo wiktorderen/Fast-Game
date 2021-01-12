@@ -14,9 +14,12 @@ public class LapTime : MonoBehaviour
     public GameObject SecondBox;
     public GameObject MiliBox;
 
+    public static float RawTime;
+
     void Update()
     {
         MiliSecCount += Time.deltaTime * 10;
+        RawTime += Time.deltaTime;
         MiliDisplay = MiliSecCount.ToString("F0");
         MiliBox.GetComponent<Text>().text = "" + MiliDisplay;
 
