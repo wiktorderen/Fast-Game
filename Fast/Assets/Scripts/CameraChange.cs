@@ -10,7 +10,7 @@ public class CameraChange : MonoBehaviour
     public int CurrentCam;
     void Update()
     {
-        if(Input.GetKeyDown("c"))
+        if(Input.GetKeyDown(KeyCode.C))
         {
             if(CurrentCam == 2)
             {
