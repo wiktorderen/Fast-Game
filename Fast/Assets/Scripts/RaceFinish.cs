@@ -10,7 +10,7 @@ public class RaceFinish : MonoBehaviour
     public GameObject ViewMode;
     public GameObject CompleteTrig;
 
-    void OnTrigger()
+    void OnTriggerEnter()
     {
         Car.SetActive(false);
         CompleteTrig.SetActive(false);
