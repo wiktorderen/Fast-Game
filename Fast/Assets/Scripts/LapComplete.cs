@@ -28,7 +28,7 @@ public class LapComplete : MonoBehaviour
         }
     }
 
-    void OnTiggerEnter()
+    void OnTriggerEnter()
     {
         Laps += 1;
         RawTime = PlayerPrefs.GetFloat("RawTime");
